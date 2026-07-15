@@ -1,12 +1,3 @@
-"""
-Divar Real Estate — Price Explorer & Predictor
-Step 5: Interactive dashboard combining EDA, a live prediction tool, and a
-model-transparency (feature importance) panel.
-
-Run with:
-    streamlit run app.py
-"""
-
 import joblib
 import numpy as np
 import pandas as pd
@@ -17,9 +8,6 @@ import streamlit as st
 st.set_page_config(page_title="Divar Real Estate Explorer", layout="wide")
 
 
-# ---------------------------------------------------------------------------
-# Data & model loading (cached so it only runs once per session)
-# ---------------------------------------------------------------------------
 
 @st.cache_data
 def load_data():
@@ -41,14 +29,14 @@ model, feature_cols, neighborhood_encoding = load_model_artifacts()
 amenity_cols = [c for c in train_df.columns if c.startswith("has_")]
 city_wide_mean_price_per_sqm = train_df["price_per_sqm"].mean()
 
-st.title("🏠 Divar Real Estate — Price Explorer & Predictor")
+st.title("Divar Real Estate: Price Explorer & Predictor")
 st.caption(
     "Apartment-sale listings, Tehran. Prices reflect asking prices at time of "
     "listing, not confirmed transaction prices."
 )
 
 tab_explore, tab_predict, tab_model = st.tabs(
-    ["📊 Explore the Market", "💰 Predict a Price", "🔍 How the Model Works"]
+    ["Explore the Market", "Predict a Price", "How the Model Works"]
 )
 
 
