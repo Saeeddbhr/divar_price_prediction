@@ -2,17 +2,13 @@
 
 Price prediction model and interactive dashboard for Tehran's apartment-sale market, built on 1M+ anonymized real estate listings from Divar (Iran's largest online classifieds platform).
 
-[**Live Dashboard**](https://divar-price-prediction.streamlit.app) (use vpn)
-
-
-
-\---
+[**Live Dashboard**](https://divar-price-prediction.streamlit.app) (VPN required)
 
 ## Overview
 
 This project scopes down a large, multi-category real estate dataset to a single coherent market segment (Tehran apartment sales), builds and compares regression models to predict listing price, and packages the results into an interactive dashboard. It also documents where the model's predictions break down.
 
-**Full write-up:** [`report.md`](./divar_price_prediction_report.md)
+**Full write-up:** [`report.md`](./report.md)
 
 ## Key Results
 
@@ -39,7 +35,7 @@ This project scopes down a large, multi-category real estate dataset to a single
 4. **Model \& evaluate** — Linear Regression baseline; Random Forest ; XGBoost, with SHAP feature importance and neighborhood-level residual analysis.
 5. **Dashboard** — Streamlit app with a filterable market explorer, a live price estimator, and a model-transparency panel.
 
-See the [full report](./divar_price_prediction_report.md) for details, results, and limitations.
+See the [full report](./report.md) for details, results, and limitations.
 
 ## Running Locally
 
@@ -57,7 +53,7 @@ Python · pandas · scikit-learn · XGBoost · SHAP · Streamlit · Plotly
 
 * Listed prices are asking prices, not confirmed sale prices.
 * Model accuracy degrades significantly in the luxury segment (see report).
-* `rooms\_count` caps at "5 or more."
+* `rooms\\\_count` caps at "5 or more."
 
-Full limitations and methodology notes are in [`divar\_price\_prediction\_report.md`](./divar_price_prediction_report.md).
+Full limitations and methodology notes are in [`report.md`](./report.md).
 
